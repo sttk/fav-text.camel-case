@@ -1,0 +1,50 @@
+{
+  "name": "@fav/text.camel-case",
+  "version": "0.0.0",
+  "description": "Converts a string into camel case.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "web/"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary npm test",
+    "coveralls": "nyc --reporter=text-lcov npm test | coveralls",
+    "web:build": "npm run web:build-src && npm run web:build-test",
+    "web:build-src": "browserify index.js --standalone fav.text.camel-case -o web/fav.text.camel-case.js && cd web && uglifyjs fav.text.camel-case.js --compress --mangle -o fav.text.camel-case.min.js --source-map url=\"'fav.text.camel-case.min.js.map'\"",
+    "web:build-test": "node tool/mktest.js",
+    "chrome:install": "npm i --no-save mocha-chrome",
+    "chrome:test": "mocha-chrome test/web/browser-test.html",
+    "phantom:install": "npm i --no-save phantomjs-prebuilt mocha-phantomjs",
+    "phantom:test": "mocha-phantomjs -p node_modules/.bin/phantomjs test/web/browser-test.html",
+    "build": "npm run lint && npm run coverage && npm run web:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sttk/fav-text.camel-case.git"
+  },
+  "keywords": [
+    "camel",
+    "case",
+    "string",
+    "text",
+    "fav"
+  ],
+  "author": "Takayuki Sato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sttk/fav-text.camel-case/issues"
+  },
+  "homepage": "https://github.com/sttk/fav-text.camel-case#readme",
+  "devDependencies": {
+    "browserify": "^16.1.0",
+    "coveralls": "^3.0.0",
+    "chai": "^3.5.0",
+    "eslint": "^4.8.0",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "uglify-js": "^3.1.3"
+  }
+}

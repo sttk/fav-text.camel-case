@@ -64,9 +64,10 @@ If *text* is a string which is composed of either lower case characters and nume
 
 #### Returns:
 
-A string converted into camel case.
+| Type   | Description                         |
+|:------:|:------------------------------------|
+| string | A string converted into camel case. |
 
-**Type:** string
 
 #### <u>camelCase.split(text) : Array</u>
 
@@ -86,9 +87,9 @@ If *text* is a string which is composed of either lower case characters and nume
 
 ##### Returns:
 
-An array of splitted words.
-
-**Type:** Array
+| Type   | Description                         |
+|:------:|:------------------------------------|
+| Array  | An array of splitted words.         |
 
 
 #### <u>camelCase.join(words) : string</u>
@@ -105,14 +106,20 @@ Joins alphanumeric words and creates a camel case string.
 
 ##### Returns:
 
-A camel case string.
-
-**Type:** string
+| Type   | Description              |
+|:------:|:-------------------------|
+| string | A camel case string.     |
 
 
 ## Checked                                                                      
 
-### Node.js (4〜)
+### Node.js (4〜12)
+
+| Platform  |   11   |   12   |
+|:---------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|
 
 | Platform  |   4    |   5    |   6    |   7    |   8    |   9    |   10   |
 |:---------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
@@ -147,7 +154,7 @@ A camel case string.
 
 ## License
 
-Copyright (C) 2018 Takayuki Sato
+Copyright (C) 2018-2019 Takayuki Sato
 
 This program is free software under [MIT][mit-url] License.
 See the file LICENSE in this distribution for more details.

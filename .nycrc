@@ -1,7 +1,6 @@
 {
   "include": [
-    "index.js",
-    "lib"
+    "index.js"
   ],
   "exclude": [
     "test"

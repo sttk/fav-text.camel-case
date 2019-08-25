@@ -1,11 +1,11 @@
 'use strict';
 
-function camelCase(text) {
+export default function camelCase(text) {
   return join(split(text));
 }
 
 function split(text) {
-  var words = text.match(/[A-Za-z0-9]+/g) || [];
+  let words = text.match(/[A-Za-z0-9]+/g) || [];
 
   if (words.length === 1 && words[0].length === text.length) {
     if (/[a-z]/.test(text)) {
@@ -17,12 +17,12 @@ function split(text) {
 }
 
 function splitCamelCase(text) {
-  var foundFirstUpperCase = /[A-Z]/.exec(text);
+  const foundFirstUpperCase = /[A-Z]/.exec(text);
   if (!foundFirstUpperCase) {
     return [text];
   }
 
-  var pattern = /[A-Z][a-z0-9]*/g;
+  const pattern = /[A-Z][a-z0-9]*/g;
 
   // PascalCase
   if (foundFirstUpperCase.index === 0) {
@@ -30,7 +30,7 @@ function splitCamelCase(text) {
   }
 
   // camelCase
-  var words = text.slice(foundFirstUpperCase.index).match(pattern);
+  const words = text.slice(foundFirstUpperCase.index).match(pattern);
   words.unshift(text.slice(0, foundFirstUpperCase.index));
   return words;
 }
@@ -40,10 +40,10 @@ function join(words) {
     return '';
   }
 
-  var word = String(words[0]);
-  var ret = word.toLowerCase();
+  let word = String(words[0]);
+  let ret = word.toLowerCase();
 
-  for (var i = 1, n = words.length; i < n; i++) {
+  for (let i = 1, n = words.length; i < n; i++) {
     word = String(words[i]);
     ret += word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase();
   }
@@ -61,5 +61,3 @@ Object.defineProperties(camelCase, {
     value: join,
   },
 });
-
-module.exports = camelCase;

@@ -1,7 +1,6 @@
 {
   "include": [
-    "index.js",
-    "lib"
+    "dist/cjs/index.js"
   ],
   "exclude": [
     "test"

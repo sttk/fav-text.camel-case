@@ -10,12 +10,14 @@ const browsers = {
     firefox: 'open -a firefox',
     vivaldi: 'open -a vivaldi',
     safari: 'open -a safari',
+    edge: 'open -a "Microsoft Edge"',
   },
 
   win32: {
     chrome: 'start chrome',
     firefox: 'start firefox',
     vivaldi: 'start vivaldi',
+    edge: 'start msedge',
     ie: 'start iexplore',
   },
 

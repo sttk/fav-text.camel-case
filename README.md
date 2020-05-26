@@ -113,13 +113,13 @@ Joins alphanumeric words and creates a camel case string.
 
 ## Checked                                                                      
 
-### Node.js (4〜12)
+### Node.js (4〜14)
 
-| Platform  |   11   |   12   |
-|:---------:|:------:|:------:|
-| macOS     |&#x25ef;|&#x25ef;|
-| Windows10 |&#x25ef;|&#x25ef;|
-| Linux     |&#x25ef;|&#x25ef;|
+| Platform  |   11   |   12   |   13   |   14   |
+|:---------:|:------:|:------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
 
 | Platform  |   4    |   5    |   6    |   7    |   8    |   9    |   10   |
 |:---------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
@@ -147,14 +147,14 @@ Joins alphanumeric words and creates a camel case string.
 
 | Platform  | Chrome | Firefox | Vivaldi | Safari |  Edge  | IE11   |
 |:---------:|:------:|:-------:|:-------:|:------:|:------:|:------:|
-| macOS     |&#x25ef;|&#x25ef; |&#x25ef; |&#x25ef;|   --   |   --   |
+| macOS     |&#x25ef;|&#x25ef; |&#x25ef; |&#x25ef;|&#x25ef;|   --   |
 | Windows10 |&#x25ef;|&#x25ef; |&#x25ef; |   --   |&#x25ef;|&#x25ef;|
 | Linux     |&#x25ef;|&#x25ef; |&#x25ef; |   --   |   --   |   --   |
 
 
 ## License
 
-Copyright (C) 2018-2019 Takayuki Sato
+Copyright (C) 2018-2020 Takayuki Sato
 
 This program is free software under [MIT][mit-url] License.
 See the file LICENSE in this distribution for more details.

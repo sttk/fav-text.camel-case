@@ -1,5 +1,5 @@
-# http://www.appveyor.com/docs/appveyor-yml
-# http://www.appveyor.com/docs/lang/nodejs-iojs
+# https://www.appveyor.com/docs/appveyor-yml
+# https://www.appveyor.com/docs/lang/nodejs-iojs
 
 environment:
   matrix:
@@ -18,13 +18,9 @@ environment:
     - nodejs_version: "0.12"
     - nodejs_version: "0.10"
 
-platform:
-  - x86
-  - x64
-
 install:
-  # https://www.appveyor.com/docs/lang/nodejs-iojs/#installing-any-version-of-nodejs-or-iojs
-  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version) $env:PLATFORM
+  - ps: Install-Product node $env:nodejs_version
+  - ps: if ($env:nodejs_version -eq 5) { npm install -g npm@3 }
   - npm install
 
 test_script:
